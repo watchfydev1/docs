@@ -1,87 +1,25 @@
 ---
 title: 'Buy Shares'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
+description: 'WatchFy gives users access to blue-chip watches typically reserved for the world’s most connected collectors.'
 icon: 'cart-shopping'
 ---
 
-The navigation menu is the list of links on every website.
+## Sourcing watches
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
+We source most watches directly from the primary market, acquiring them at retail prices significantly below secondary market valuations. This allows WatchFy to capture appreciation from day one - buying at insider prices and later selling where real demand drives premiums.
 
-## Navigation syntax
+Thanks to over a decade of industry relationships, WatchFy has access to exclusive allocations and newly released models that rarely reach the public market. Each timepiece is fully insured and securely stored in regulated vaults, ensuring complete peace of mind for users.
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+## Fractionalization
 
-<CodeGroup>
+Every share on WatchFy is backed by a real, authenticated luxury watch. Once a watch is acquired, it’s fractionalized on-chain through the issuance of tokens on Solana, each representing a proportional ownership stake in the underlying asset.
 
-```json Regular Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": ["quickstart"]
-        }
-      ]
-    }
-  ]
-}
-```
+Users can purchase these tokens on our platform using USDC. Each collection period lasts up to four weeks - if any shares remain unsold, WatchFy acquires them to ensure every watch is fully funded.
 
-```json Nested Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "quickstart",
-            {
-              "group": "Nested Reference Pages",
-              "pages": ["nested-reference-page"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
+From there, users have two paths:
 
-</CodeGroup>
+* **Hold and earn:** Retain tokens until the WatchFy team sells the physical watch in the secondary market after appreciation. Token holders can then redeem (burn) their tokens for USDC, receiving their proportional share of the profits
+* **Trade early:** Sell tokens at any time on WatchFy’s secondary marketplace, realizing returns before the underlying watch is sold
 
-## Folders
-
-Simply put your MDX files in folders and update the paths in `docs.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
-
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
-
-## Hidden pages
-
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+## Example
+A $10,000 Rolex Datejust is fractionalized into 1,000 tokens, each representing 0.1% ownership of the watch. Users purchase these tokens and share directly in the upside when the watch appreciates and is sold.
